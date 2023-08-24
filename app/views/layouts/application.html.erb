@@ -10,7 +10,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-dark">
+  <nav class="navbar navbar-dark navbar-expand-lg border-bottom border-light bg-dark d-lg-none">
+    <div class="container-fluid">
+      <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-conversations" aria-controls="offcanvas-conversations">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

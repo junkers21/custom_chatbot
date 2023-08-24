@@ -1,0 +1,57 @@
+<div id="conversation-body">
+  <div
+    class="container-fluid"
+    id="conversation-box"
+    data-url="<%= exchanges_url %>"
+    data-url-conversation="<%= conversations_url %>"
+  >
+  </div>
+
+  <div id="chat-box">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-12 col-xl-8">
+          <div class="input-group">
+            <textarea class="form-control" id="input-text"></textarea>
+            <button class="btn btn-outline-secondary text-white" type="button" id="send-text"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-start bg-dark border-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas-conversations" aria-labelledby="offcanvas-conversations--abel">
+  <div class="offcanvas-header d-md-none">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="container-fluid">
+
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <input type="radio" checked id="input_radio_conversation_0" class="input-radio-conversations" name="conversation_id" value="0">
+          <div class="card bg-dark text-white">
+            <div class="row">
+              <div class="col-12">
+                <div class="py-2 px-3">
+                  <h5 class="text-truncate mb-0">Nouvelle conversation</h5>
+                  <label for="input_radio_conversation_0" class="stretched-link"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="conversations-box">
+        <%= render @conversations %>
+      </div>
+
+    </div>
+  </div>
+</div>

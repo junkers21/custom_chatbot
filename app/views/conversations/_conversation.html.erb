@@ -1,0 +1,20 @@
+<div class="row mb-3" id="conversation_<%= conversation.id %>" data-id="<%= conversation.id %>">
+  <div class="col-12">
+    <input type="radio" id="input_radio_conversation_<%= conversation.id %>" class="input-radio-conversations" name="conversation_id" value="<%= conversation.id %>">
+    <div class="card bg-dark text-white">
+      <div class="row">
+        <div class="col-9">
+          <div class="py-2 px-3">
+            <h5 class="text-truncate mb-0"><%= conversation.hr_title %></h5>
+            <label for="input_radio_conversation_<%= conversation.id %>" class="stretched-link"></label>
+          </div>
+        </div>
+        <div class="col text-end border-start">
+          <div class="py-2 px-3 position-relative">
+            <a href="#" class="text-danger stretched-link js-delete" data-id="<%= conversation.id %>"><i class="bi bi-trash"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
