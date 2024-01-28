@@ -73,3 +73,6 @@ end
 
 # Project Gems
 gem 'bootstrap', '~> 5.2.3'
+
+# Python 3 libraries
+# langchain openai beautifulsoup4 lxml bs4 qdrant-client tiktoken

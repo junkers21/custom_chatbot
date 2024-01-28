@@ -8,7 +8,7 @@
 <div class="row mb-3 justify-content-end">
   <div class="col-7">
     <div class="bg-primary rounded px-3 py-2">
-      <%= exchange.output %>
+      <%= raw exchange.output.gsub("\n", "<br>") %>
     </div>
   </div>
 </div>

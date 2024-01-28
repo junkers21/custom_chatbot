@@ -15,6 +15,7 @@ class ExchangesController < ApplicationController
     @exchange = Exchange.new(exchange_params)
 
     if @exchange.save
+      @exchange.get_answer
       render partial: 'exchanges/exchange', status: :created, locals: { exchange: @exchange }, layout: false
     else
       render json: @exchange.errors, status: :unprocessable_entity
